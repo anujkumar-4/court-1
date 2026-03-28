@@ -1,0 +1,159 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #f4c977;
+  background: #0d0702;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top right, #3b2307, #050302 60%);
+  color: #f7d99a;
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero {
+  border: 1px solid #9a6321;
+  background: linear-gradient(90deg, #070402, #211203);
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  align-items: center;
+}
+
+.hero-id {
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 700;
+  color: #f8b546;
+  letter-spacing: 0.12em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-copy {
+  margin: 0.6rem 0 0;
+  color: #ddb271;
+}
+
+.insight-grid {
+  margin: 1.2rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.insight-card,
+.case-form,
+.case-table-wrap {
+  border: 1px solid #6e4313;
+  background: rgba(17, 10, 2, 0.92);
+  padding: 0.9rem;
+}
+
+.insight-label {
+  margin: 0;
+  color: #c38d3f;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+}
+
+.insight-value {
+  margin: 0.4rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.insight-helper {
+  margin: 0;
+  color: #a88550;
+}
+
+.case-form h2,
+.case-table-wrap h2 {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #cf9b4c;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+input,
+textarea,
+select,
+button {
+  border: 1px solid #7d4f17;
+  background: #110a03;
+  color: #f5d79d;
+  padding: 0.52rem;
+}
+
+button {
+  margin-top: 0.8rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.case-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.case-table th,
+.case-table td {
+  border-bottom: 1px solid #4e300f;
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem;
+}
+
+.error {
+  color: #ff9191;
+}
+
+@media (max-width: 900px) {
+  .insight-grid,
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
